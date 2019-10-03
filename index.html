@@ -18,7 +18,7 @@
 <script>
     alert('iniciando coisa')
     try {
-        var socket = io.connect('https://cfghyhyhyzjulia.herokuapp.com', {transports:['jsonp-polling']});
+        var socket = io.connct('https://cfghyhyhyzjulia.herokuapp.com', {transports:['jsonp-polling']});
         alert('coisando')
         socket.emit('chat message', 5);
     } catch (error) {
