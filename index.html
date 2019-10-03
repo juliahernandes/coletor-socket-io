@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./socket.io/socket.io.js"></script>
     <title>Document</title>
 </head>
 <body>
     
 </body>
-
-<script src="https://coletor-julia.herokuapp.com/socket.io/socket.io.js"></script>
 
 <script>
     alert('iniciando coisa')
@@ -20,7 +19,6 @@
         socket.emit('chat message', 5);
     } catch (error) {
         alert('fodeu');
-        alert(JSON.stringify(error));
         alert(error[Object.keys(error)[0]])
     }
 
