@@ -1,6 +1,7 @@
 const app = require('express')(),
     http = require('http').createServer(app),
-    io = require('socket.io')(http);
+    io = require('socket.io')(http),
+    port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
@@ -13,6 +14,6 @@ io.on('connection', (socket) => {
     });
 });
 
-http.listen(3000, () => {
-    console.log('Listening on port 3000');
+http.listen(port, () => {
+    console.log('Listening on port ', port);
 });
