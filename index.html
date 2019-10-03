@@ -6,7 +6,7 @@
 
 <script>
     alert('iniciando coisa')
-    var socket = io('https://coletor-julia.herokuapp.com');
+    var socket = io.connect('https://coletor-julia.herokuapp.com');
     alert('coisando')
     socket.on('connected', function (){
         alert('coisou')
