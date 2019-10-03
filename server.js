@@ -7,12 +7,17 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
 });
 
-io.on('connection', (socket) => {
-    console.log('a user connected');
-    socket.on('chat message', (msg) => {
-        console.log('message: ', msg);
-    });
-});
+app.get('/rola', (req, res) => {
+    const content = new Array(5).fill({'chuchuFurioso': 'rola'})
+    res.send(`<html><p>${JSON.stringify(content)}</p><html>`)
+})
+
+// io.on('connection', (socket) => {
+//     console.log('a user connected');
+//     socket.on('chat message', (msg) => {
+//         console.log('message: ', msg);
+//     });
+// });
 
 http.listen(port, () => {
     console.log('Listening on port ', port);
