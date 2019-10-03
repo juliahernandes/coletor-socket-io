@@ -1,11 +1,9 @@
 <script src="/socket.io/socket.io.js"></script>
 
 <script>
-    alert('passei aqui')
-</script>
-
-<script>
     var socket = io();
+    alert('passei aqui 1')
     socket.emit('chat message', 5);
+    alert('passei aqui 2')
     alert(socket);
 </script>
