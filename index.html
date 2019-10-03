@@ -8,6 +8,7 @@
     alert('iniciando coisa')
     var socket = io.connect('https://coletor-julia.herokuapp.com');
     alert('coisando')
+    socket.emit('chat message', 5);
     socket.on('connected', function (){
         alert('coisou')
     })
