@@ -5,9 +5,15 @@
 </script>
 
 <script>
-    var socket = 'abc';
-    alert('passei aqui 1');
-    socket.emit('chat message', 5);
-    alert('passei aqui 2');
-    alert(socket);
+    alert('iniciando coisa')
+    var socket = io('https://coletor-julia.herokuapp.com');
+    alert('coisando')
+    socket.on('connected', function (){
+        alert('coisou')
+    })
+
+    // alert('passei aqui 1');
+    // socket.emit('chat message', 5);
+    // alert('passei aqui 2');
+    // alert(socket);
 </script>
