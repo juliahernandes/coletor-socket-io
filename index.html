@@ -18,10 +18,11 @@
 <script>
     alert('iniciando coisa')
     try {
-        var socket = io.connect('https://cfghyhyhyz\hza\xz\xoletor-julia.herokuapp.com', {transports:['jsonp-polling']});
+        var socket = io.connect('https://cfghyhyhyzjulia.herokuapp.com', {transports:['jsonp-polling']});
         alert('coisando')
         socket.emit('chat message', 5);
     } catch (error) {
+        console.log(error);
         alert(error.message);
     }
 
