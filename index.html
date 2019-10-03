@@ -17,12 +17,16 @@
 
 <script>
     alert('iniciando coisa')
-    var socket = io.connect('https://coletor-julia.herokuapp.com');
-    alert('coisando')
-    socket.emit('chat message', 5);
-    socket.on('connected', function (){
-        alert('coisou')
-    })
+    try {
+        var socket = io.connect('https://coletor-julia.herokuapp.com');
+        alert('coisando')
+        socket.emit('chat message', 5);
+        socket.on('connected', function (){
+            alert('coisou')
+        })
+    } catch (error) {
+        alert(error)
+    }
 
     // alert('passei aqui 1');
     // socket.emit('chat message', 5);
