@@ -9,7 +9,7 @@
 <body>
     
 </body>
-<script src="/socket.io/socket.io.js"></script>
+<script src="https://coletor-julia.herokuapp.com/socket.io/socket.io.js"></script>
 
 <script>
     alert('aa');
@@ -18,7 +18,7 @@
 <script>
     alert('iniciando coisa')
     try {
-        var socket = io.connct('https://cfghyhyhyzjulia.herokuapp.com', {transports:['jsonp-polling']});
+        var socket = io.connect('https://coletor-julia.herokuapp.com', {transports:['jsonp-polling']});
         alert('coisando')
         socket.emit('chat message', 5);
     } catch (error) {
