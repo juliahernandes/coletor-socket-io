@@ -15,10 +15,6 @@
 </body>
 
 <script type="text/javascript">
-    alert('oi');
-</script>
-
-<script type="text/javascript">
 
 /*
     http://www.JSON.org/json2.js
@@ -519,14 +515,15 @@ return new(e[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
 </script>
 
 <script type="text/javascript">
-    alert('iniciando coisa')
     try {
         var socket = io.connect('http://coletor-julia.herokuapp.com');
-        alert('coisando')
         socket.emit('chat message', 5);
-        alert('coisou')
+
+        socket.on('chat received', (msg) => {
+            document.getElementById('content').innerHTML = msg + new Date();
+        });
+        
     } catch (error) {
-        alert('fodeu');
         document.getElementById('content').innerHTML = error.message;
     }
 
