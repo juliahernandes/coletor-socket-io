@@ -12,12 +12,12 @@ app.get('/rola', (req, res) => {
     res.send(`<html><p>${JSON.stringify(content)}</p><html>`)
 })
 
-// io.on('connection', (socket) => {
-//     console.log('a user connected');
-//     socket.on('chat message', (msg) => {
-//         console.log('message: ', msg);
-//     });
-// });
+io.on('connection', (socket) => {
+    console.log('a user connected');
+    socket.on('chat message', (msg) => {
+        console.log('message: ', msg);
+    });
+});
 
 http.listen(port, () => {
     console.log('Listening on port ', port);
