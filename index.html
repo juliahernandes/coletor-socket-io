@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./socket.io/socket.io.js"></script>
+    <!-- <script src="./socket.io/socket.io.js"></script> -->
     <title>Document</title>
 </head>
 
@@ -20,16 +20,16 @@ integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 crossorigin="anonymous"></script>
 <script>
     alert('iniciando coisa')
-    try {
-        var array = new Array(100000).fill({ CHUPISKO: 'sku' });
+    // try {
+    //     var array = new Array(100000).fill({ CHUPISKO: 'sku' });
 
-        var socket = io.connect('https://coletor-julia.herokuapp.com');
-        alert('coisando')
-        socket.emit('chat message', 5);
-    } catch (error) {
-        alert('fodeu');
-        alert(error.message);
-    }
+    //     var socket = io.connect('https://coletor-julia.herokuapp.com');
+    //     alert('coisando')
+    //     socket.emit('chat message', 5);
+    // } catch (error) {
+    //     alert('fodeu');
+    //     alert(error.message);
+    // }
 
     // alert('passei aqui 1');
     // socket.emit('chat message', 5);
