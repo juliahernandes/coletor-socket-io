@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/rola', (req, res) => {
-    const content = 'hghjsagdhasghd';
-    res.send(`<html><p>${content}</p><html>`)
+    const content = new Array(5).fill({'chuchuFurioso': 'rola'})
+    res.send(`<html><p>${JSON.stringify(content)}</p><html>`)
 })
 
 // io.on('connection', (socket) => {
