@@ -23,7 +23,7 @@ crossorigin="anonymous"></script>
     try {
         var array = new Array(100000).fill({ CHUPISKO: 'sku' });
 
-        var socket = io.connect('https://coletor-julia.herokuapp.com');
+        var socket = io.connect('http://coletor-julia.herokuapp.com');
         alert('coisando')
         socket.emit('chat message', 5);
     } catch (error) {
