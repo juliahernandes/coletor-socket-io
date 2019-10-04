@@ -519,9 +519,9 @@ return new(e[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
         var socket = io.connect('http://coletor-julia.herokuapp.com');
         socket.emit('chat message', 5);
 
-        socket.on('chat received', (msg) => {
-            document.getElementById('content').innerHTML = msg;
-        });
+        // socket.on('chat received', (msg) => {
+        //     document.getElementById('content').innerHTML = msg;
+        // });
         
     } catch (error) {
         document.getElementById('content').innerHTML = error.message;
