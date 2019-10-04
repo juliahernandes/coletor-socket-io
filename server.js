@@ -12,12 +12,14 @@ app.get('/rola', (req, res) => {
     res.send(`<html><p>${JSON.stringify(content)}</p><html>`)
 })
 
+const retorno = () => 'coiso coisado';
+
 io.on('connection', (socket) => {
     console.log('a user connected');
-    socket.on('chat message', (msg) => {
+    socket.on('chat message', (msg, retorno) => {
         console.log('message: ', msg);
 
-        //socket.emit('chat received', 'coiso coisado');
+        retorno();
     });
 });
 

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <iframe src="http://coletor-julia.herokuapp.com/rola"></iframe>
+    <input id="codigoBarras" oninput="executa()" style="border: 1px solid #ff0000;">
 
     <div id="content"></div>
 </body>
@@ -515,10 +515,19 @@ return new(e[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
 </script>
 
 <script type="text/javascript">
+
+function executa() {
     try {
         var socket = io.connect('http://coletor-julia.herokuapp.com');
-        socket.emit('chat message', 5);
 
+        var codigo = document.getElementById('codigoBarras').value;
+
+        socket.emit('chat message', codigo, function(a) {
+            document.getElementById('content').innerHTML = a + ' <=> ' + codigo;
+        });
+
+
+        //document.getElementById('codigoBarras').value;
         // socket.on('chat received', (msg) => {
         //     document.getElementById('content').innerHTML = msg;
         // });
@@ -526,11 +535,8 @@ return new(e[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
     } catch (error) {
         document.getElementById('content').innerHTML = error.message;
     }
+}
 
-    // alert('passei aqui 1');
-    // socket.emit('chat message', 5);
-    // alert('passei aqui 2');
-    // alert(socket);
 
 </script>
 
