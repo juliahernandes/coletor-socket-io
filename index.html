@@ -12,9 +12,12 @@
 <body>
     <iframe src="https://coletor-julia.herokuapp.com/rola"></iframe>
 
-
+    <div id="content"></div>
 </body>
-
+<script
+src="https://code.jquery.com/jquery-1.12.4.min.js"
+integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+crossorigin="anonymous"></script>
 <script>
     alert('iniciando coisa')
     try {
@@ -32,6 +35,10 @@
     // socket.emit('chat message', 5);
     // alert('passei aqui 2');
     // alert(socket);
+
+    $.get("https://coletor-julia.herokuapp.com/rola", function(res) {
+        $("#content").html(res.data);
+    })
 </script>
 
 </html>
