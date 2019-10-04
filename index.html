@@ -14,15 +14,20 @@
 
     <div id="content"></div>
 </body>
+
+<script>
+    alert('oi');
+</script>
+
 <script
-src="http://code.jquery.com/jquery-1.12.4.min.js"
-integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-crossorigin="anonymous"></script>
+    src="http://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous">
+</script>
+
 <script>
     alert('iniciando coisa')
     try {
-        var array = new Array(100000).fill({ CHUPISKO: 'sku' });
-
         var socket = io.connect('http://coletor-julia.herokuapp.com');
         alert('coisando')
         socket.emit('chat message', 5);
