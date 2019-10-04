@@ -28,7 +28,7 @@ crossorigin="anonymous"></script>
         socket.emit('chat message', 5);
     } catch (error) {
         alert('fodeu');
-        alert(error.message);
+        alert(error[Object.keys(error)[0]])
     }
 
     // alert('passei aqui 1');
