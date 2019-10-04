@@ -525,12 +525,6 @@ function executa() {
         socket.emit('chat message', codigo, function(a) {
             document.getElementById('content').innerHTML = a + ' <=> ' + codigo;
         });
-
-
-        //document.getElementById('codigoBarras').value;
-        // socket.on('chat received', (msg) => {
-        //     document.getElementById('content').innerHTML = msg;
-        // });
         
     } catch (error) {
         document.getElementById('content').innerHTML = error.message;

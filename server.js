@@ -7,8 +7,8 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
 });
 
-app.get('/rola', (req, res) => {
-    const content = new Array(5).fill({'chuchuFurioso': 'rola'})
+app.get('/subway', (req, res) => {
+    const content = new Array(5).fill({'chuchuFurioso': 'subway'})
     res.send(`<html><p>${JSON.stringify(content)}</p><html>`)
 })
 
