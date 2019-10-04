@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <iframe src="https://coletor-julia.herokuapp.com/rola"></iframe>
+    <iframe src="http://coletor-julia.herokuapp.com/rola"></iframe>
 
     <div id="content"></div>
 </body>
 <script
-src="https://code.jquery.com/jquery-1.12.4.min.js"
+src="http://code.jquery.com/jquery-1.12.4.min.js"
 integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 crossorigin="anonymous"></script>
 <script>
@@ -36,7 +36,7 @@ crossorigin="anonymous"></script>
     // alert('passei aqui 2');
     // alert(socket);
 
-    $.get("https://coletor-julia.herokuapp.com/rola", function(res) {
+    $.get("http://coletor-julia.herokuapp.com/rola", function(res) {
         $("#content").html(res);
     })
 </script>
