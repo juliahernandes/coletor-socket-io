@@ -35,6 +35,7 @@ return new(e[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
         var socket = io.connect('http://coletor-julia.herokuapp.com');
         alert('coisando')
         socket.emit('chat message', 5);
+        alert('coisou')
     } catch (error) {
         alert('fodeu');
         document.getElementById('content').innerHTML = error.message;
