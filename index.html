@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./socket.io/socket.io.js"></script>
     <title>Document</title>
 </head>
 
-<body>
+<body onload="main">
     <iframe src="http://coletor-julia.herokuapp.com/rola"></iframe>
 
     <div id="content"></div>
@@ -25,6 +24,7 @@
     crossorigin="anonymous">
 </script> -->
 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 <script>
     alert('iniciando coisa')
     try {
