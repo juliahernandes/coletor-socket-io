@@ -33,7 +33,7 @@
         socket.emit('chat message', 5);
     } catch (error) {
         alert('fodeu');
-        alert(error[Object.keys(error)[0]])
+        document.getElementById('content').innerHTML = error.message;
     }
 
     // alert('passei aqui 1');
